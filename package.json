@@ -1,0 +1,44 @@
+{
+  "name": "clayutils",
+  "version": "1.0.0",
+  "description": "A collection of utility functions for working with Clay.",
+  "main": "index.js",
+  "scripts": {
+    "generate-readme": "node docs/generate-readme.js && git add README.md",
+    "lint": "eslint lib test index.js index.test.js",
+    "test-local": "istanbul cover _mocha",
+    "test": "npm run lint && istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "pre-commit": [
+    "generate-readme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clay/clayutils.git"
+  },
+  "keywords": [
+    "clay"
+  ],
+  "author": "New York Media",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clay/clayutils/issues"
+  },
+  "homepage": "https://github.com/clay/clayutils#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "coveralls": "^2.13.0",
+    "eslint": "^3.19.0",
+    "handlebars": "^4.0.6",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "pre-commit": "^1.2.2",
+    "sinon": "^2.1.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.1",
+    "lodash": "^4.17.4",
+    "nymag-fs": "^1.0.0"
+  }
+}
