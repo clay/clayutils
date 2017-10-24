@@ -1,5 +1,7 @@
 # clayutils
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clay/clayutils.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/clay/clayutils.svg?branch=master)](https://travis-ci.org/clay/clayutils)
 [![Coverage Status](https://coveralls.io/repos/github/clay/clayutils/badge.svg?branch=master)](https://coveralls.io/github/clay/clayutils?branch=master)
 
