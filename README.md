@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/clay/clayutils.svg?branch=master)](https://travis-ci.org/clay/clayutils)
 [![Coverage Status](https://coveralls.io/repos/github/clay/clayutils/badge.svg?branch=master)](https://coveralls.io/github/clay/clayutils?branch=master)
 
-Utility functions for working with Clay
+Utility functions for working with Clay.
+
+Version 2.x is compatible with Amphora 5.x. For pre-5.x utilities refer to 1.x releases.
 
 # Installation
 
@@ -26,4 +28,8 @@ npm install --save clayutils
 * **isList** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isList)
 * **isPage** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isPage)
 * **isUser** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isUser)
+* **jsonPrefixToSlug** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/jsonPrefixToSlug)
+* **jsonSlugToPrefix** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/jsonSlugToPrefix)
 * **replaceVersion** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/replaceVersion)
+* **uriPrefixToSlug** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/uriPrefixToSlug)
+* **uriSlugToPrefix** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/uriSlugToPrefix)
