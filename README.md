@@ -26,4 +26,8 @@ npm install --save clay-utils
 * **isList** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isList)
 * **isPage** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isPage)
 * **isUser** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isUser)
+* **jsonPrefixToSlug** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/jsonPrefixToSlug)
+* **jsonSlugToPrefix** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/jsonSlugToPrefix)
 * **replaceVersion** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/replaceVersion)
+* **uriPrefixToSlug** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/uriPrefixToSlug)
+* **uriSlugToPrefix** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/uriSlugToPrefix)
