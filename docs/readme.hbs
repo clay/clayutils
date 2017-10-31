@@ -1,14 +1,16 @@
-# clay-utils
+# clayutils
 
 [![Build Status](https://travis-ci.org/clay/clayutils.svg?branch=master)](https://travis-ci.org/clay/clayutils)
 [![Coverage Status](https://coveralls.io/repos/github/clay/clayutils/badge.svg?branch=master)](https://coveralls.io/github/clay/clayutils?branch=master)
 
-Utility functions for working with Clay
+Utility functions for working with Clay.
+
+Version 2.x is compatible with Amphora 5.x. For pre-5.x utilities refer to 1.x releases.
 
 # Installation
 
 ```
-npm install --save clay-utils
+npm install --save clayutils
 ```
 
 ---
