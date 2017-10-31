@@ -11,7 +11,7 @@ Get component instance from uri
 #### Example
 
 ```js
-getComponentInstance('nymag.com/press/components/base/instances/foobarbaz@published')
+getComponentInstance('nymag.com/press/_components/base/instances/foobarbaz@published')
 //=> 'foobarbaz'
 
 ```

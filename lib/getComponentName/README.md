@@ -11,7 +11,7 @@ Get component name from uri
 #### Example
 
 ```js
-getComponentName('nymag.com/press/components/base/instances/foobarbaz@published')
+getComponentName('nymag.com/press/_components/base/instances/foobarbaz@published')
 //=> 'base'
 
 ```

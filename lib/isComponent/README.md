@@ -1,6 +1,6 @@
 ### isComponent
 
-Check if '/components/' is in the uri
+Check if '/_components/' is in the uri
 
 #### Params
 
@@ -11,7 +11,7 @@ Check if '/components/' is in the uri
 #### Example
 
 ```js
-isComponent('nymag.com/press/components/base/instances/foobarbaz@published')
+isComponent('nymag.com/press/_components/base/instances/foobarbaz@published')
 //=> true
 
 ```

@@ -11,7 +11,7 @@ Get page instance from uri
 #### Example
 
 ```js
-getPageInstance('nymag.com/scienceofus/pages/foobarbaz@published')
+getPageInstance('nymag.com/scienceofus/_pages/foobarbaz@published')
 //=> 'foobarbaz@published'
 
 ```

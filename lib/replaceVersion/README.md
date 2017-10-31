@@ -12,7 +12,7 @@ Replace component version in uri
 #### Example
 
 ```js
-replaceVersion('nymag.com/press/components/base/instances/foobarbaz@published', '')
+replaceVersion('nymag.com/press/_components/base/instances/foobarbaz@published', '')
 //=> 'base'
 
 ```

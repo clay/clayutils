@@ -1,6 +1,6 @@
 ### isPage
 
-Check if '/pages/' is in the uri
+Check if '/_pages/' is in the uri
 
 #### Params
 
@@ -11,7 +11,7 @@ Check if '/pages/' is in the uri
 #### Example
 
 ```js
-isPage('nymag.com/scienceofus/pages/foobarbaz@published')
+isPage('nymag.com/scienceofus/_pages/foobarbaz@published')
 //=> true
 
 ```

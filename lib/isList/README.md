@@ -1,6 +1,6 @@
 ### isList
 
-Check if '/lists/' is in the uri
+Check if '/_lists/' is in the uri
 
 #### Params
 
@@ -11,7 +11,7 @@ Check if '/lists/' is in the uri
 #### Example
 
 ```js
-isList('nymag.com/press/lists/foo')
+isList('nymag.com/press/_lists/foo')
 //=> true
 
 ```

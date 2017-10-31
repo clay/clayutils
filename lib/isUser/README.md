@@ -1,6 +1,6 @@
 ### isUser
 
-Check if '/users/' is in the uri
+Check if '/_users/' is in the uri
 
 #### Params
 
@@ -11,7 +11,7 @@ Check if '/users/' is in the uri
 #### Example
 
 ```js
-isUser('nymag.com/press/users/foo')
+isUser('nymag.com/press/_users/foo')
 //=> true
 
 ```

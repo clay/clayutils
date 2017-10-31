@@ -11,7 +11,7 @@ Check if a uri points to a DEFAULT instance of a component
 #### Example
 
 ```js
-isDefaultComponent('nymag.com/press/components/base/instances/foobarbaz@published')
+isDefaultComponent('nymag.com/press/_components/base/instances/foobarbaz@published')
 //=> false
 
 ```

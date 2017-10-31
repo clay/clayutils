@@ -11,9 +11,9 @@ Get page version from uri
 #### Example
 
 ```js
-getPageVersion('nymag.com/press/pages/foo@published')
+getPageVersion('nymag.com/press/_pages/foo@published')
 //=> 'published'
 
-getPageVersion('nymag.com/press/pages/foo')
+getPageVersion('nymag.com/press/_pages/foo')
 //=> null
 ```
