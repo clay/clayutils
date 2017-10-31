@@ -11,3 +11,7 @@ module.exports.isPage = require('./lib/isPage');
 module.exports.isList = require('./lib/isList');
 module.exports.isUser = require('./lib/isUser');
 module.exports.replaceVersion = require('./lib/replaceVersion');
+module.exports.uriPrefixToSlug = require('./lib/uriPrefixToSlug');
+module.exports.uriSlugToPrefix = require('./lib/uriSlugToPrefix');
+module.exports.jsonPrefixToSlug = require('./lib/jsonPrefixToSlug');
+module.exports.jsonSlugToPrefix = require('./lib/jsonSlugToPrefix');
