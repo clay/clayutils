@@ -10,7 +10,7 @@ Version 2.x is compatible with Amphora 5.x. For pre-5.x utilities refer to 1.x r
 # Installation
 
 ```
-npm install --save clayutils
+npm install --save clay-utils
 ```
 
 ---
