@@ -23,6 +23,7 @@ npm install --save clayutils
 * **getListInstance** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getListInstance)
 * **getPageInstance** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getPageInstance)
 * **getPageVersion** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getPageVersion)
+* **getPrefix** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getPrefix)
 * **isComponent** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isComponent)
 * **isDefaultComponent** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isDefaultComponent)
 * **isList** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/isList)
