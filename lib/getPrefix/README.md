@@ -11,6 +11,6 @@ Returns the site prefix from the specified URI. The prefix includes site hostnam
 #### Example
 
 ```js
-isComponent('nymag.com/press/_components/base/instances/foobarbaz@published')
+getPrefix('nymag.com/press/_components/base/instances/foobarbaz@published')
 //=> nymag.com/press
 ```
