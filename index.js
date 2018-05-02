@@ -9,6 +9,7 @@ module.exports.getPrefix = require('./lib/getPrefix');
 module.exports.isComponent = require('./lib/isComponent');
 module.exports.isDefaultComponent = require('./lib/isDefaultComponent');
 module.exports.isPage = require('./lib/isPage');
+module.exports.isPublished = require('./lib/isPublished');
 module.exports.isList = require('./lib/isList');
 module.exports.isUser = require('./lib/isUser');
 module.exports.replaceVersion = require('./lib/replaceVersion');
