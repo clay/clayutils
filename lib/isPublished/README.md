@@ -1,6 +1,6 @@
 ### isPublished
 
-Check if the uri ends with '@published'
+Check if '@published' is in the uri
 
 #### Params
 
