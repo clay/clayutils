@@ -11,6 +11,7 @@ module.exports.isDefaultComponent = require('./lib/isDefaultComponent');
 module.exports.isPage = require('./lib/isPage');
 module.exports.isPublished = require('./lib/isPublished');
 module.exports.isList = require('./lib/isList');
+module.exports.isUri = require('./lib/isUri');
 module.exports.isUser = require('./lib/isUser');
 module.exports.replaceVersion = require('./lib/replaceVersion');
 module.exports.uriPrefixToSlug = require('./lib/uriPrefixToSlug');
