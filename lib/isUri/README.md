@@ -1,4 +1,4 @@
-### isPage
+### isUri
 
 Check if '/_uris/' is in the uri
 
@@ -11,7 +11,7 @@ Check if '/_uris/' is in the uri
 #### Example
 
 ```js
-isPage('nymag.com/_uris/someuriid')
+isUri('nymag.com/_uris/someuriid')
 //=> true
 
 ```
