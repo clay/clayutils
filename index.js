@@ -11,6 +11,7 @@ module.exports.getPrefix = require('./lib/getPrefix');
 module.exports.isComponent = require('./lib/isComponent');
 module.exports.isLayout = require('./lib/isLayout');
 module.exports.isDefaultComponent = require('./lib/isDefaultComponent');
+module.exports.isDefaultLayout = require('./lib/isDefaultLayout');
 module.exports.isPage = require('./lib/isPage');
 module.exports.isPublished = require('./lib/isPublished');
 module.exports.isList = require('./lib/isList');
