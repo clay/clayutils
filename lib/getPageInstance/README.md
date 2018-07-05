@@ -18,5 +18,5 @@ getPageInstance('nymag.com/scienceofus/_pages/foobar-baz/meta')
 //=> 'foobar-baz'
 
 getPageInstance('nymag.com/scienceofus/_pages/foobarbaz@published')
-//=> 'foobarbaz@published'
+//=> 'foobarbaz'
 ```
