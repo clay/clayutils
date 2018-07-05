@@ -11,7 +11,7 @@ Get layout name from uri
 #### Example
 
 ```js
-getComponentName('nymag.com/press/_layouts/base/instances/foobarbaz@published')
+getLayoutName('nymag.com/press/_layouts/base/instances/foobarbaz@published')
 //=> 'base'
 
 ```

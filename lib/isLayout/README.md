@@ -11,7 +11,7 @@ Check if '/_layouts/' is in the uri
 #### Example
 
 ```js
-isComponent('nymag.com/press/_layouts/base/instances/foobarbaz@published')
+isLayout('nymag.com/press/_layouts/base/instances/foobarbaz@published')
 //=> true
 
 ```

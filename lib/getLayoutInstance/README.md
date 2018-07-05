@@ -11,7 +11,7 @@ Get layout instance from uri
 #### Example
 
 ```js
-getComponentInstance('nymag.com/press/_layouts/base/instances/foobarbaz@published')
+getLayoutInstance('nymag.com/press/_layouts/base/instances/foobarbaz@published')
 //=> 'foobarbaz'
 
 ```
