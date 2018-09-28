@@ -1,6 +1,6 @@
-### findComponentInPage
+### findComponentRefInPage
 
-Returns the first URI of a type of component found in a page data object
+Returns the first URI of a type of component found in a page data object. Note: this will only work for _unresolved_ page data.
 
 #### Params
 
@@ -29,7 +29,7 @@ const page = {
     layout: 'www.site.com/_layouts/layout/instances/gallery'
   };
 
-findComponentInPage(page, 'meta-authors')
+findComponentRefInPage(page, 'meta-authors')
 //=> 'www.site.com/_components/meta-authors/instances/cjge4wmjt010zhfy61g45ekip'
 
 ```
