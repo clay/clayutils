@@ -17,6 +17,7 @@ npm install --save clayutils
 
 # Utils:
 
+* **findComponentInPage** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/findComponentInPage)
 * **getComponentInstance** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getComponentInstance)
 * **getComponentName** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getComponentName)
 * **getComponentVersion** [(code|tests|docs)](https://github.com/clay/clayutils/tree/master/lib/getComponentVersion)
