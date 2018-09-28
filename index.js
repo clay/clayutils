@@ -1,4 +1,5 @@
 'use strict';
+module.exports.findComponentRefInPage = require('./lib/findComponentRefInPage');
 module.exports.getComponentInstance = require('./lib/getComponentInstance');
 module.exports.getLayoutInstance = require('./lib/getLayoutInstance');
 module.exports.getComponentName = require('./lib/getComponentName');
