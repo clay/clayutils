@@ -1,6 +1,6 @@
 {
   "name": "clayutils",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "A collection of utility functions for working with Clay.",
   "main": "dist/index.js",
   "scripts": {
