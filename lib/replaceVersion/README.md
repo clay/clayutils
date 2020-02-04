@@ -5,14 +5,19 @@ Replace component version in uri
 #### Params
 
 * `uri` _string_
-* `version` _integer_
+* `version` _string_
 
-**Returns** _string|null_
+**Returns** _string_
 
 #### Example
 
 ```js
 replaceVersion('nymag.com/press/_components/base/instances/foobarbaz@published', '')
-//=> 'base'
+//=> 'nymag.com/press/_components/base/instances/foobarbaz'
+
+
+replaceVersion('nymag.com/press/_components/base/instances/foobarbaz', 'published')
+//=> 'nymag.com/press/_components/base/instances/foobarbaz@published'
+
 
 ```
