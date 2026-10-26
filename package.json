@@ -8,10 +8,10 @@
     "generate-readme": "node docs/generate-readme.js && git add README.md",
     "lint": "eslint lib test index.js index.test.js",
     "test-local": "istanbul cover _mocha -x dist/**",
-    "test": "npm run lint && istanbul cover _mocha -x dist/** --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "build": "webpack --mode development",
-    "watch": "webpack --mode development -w",
-    "prepublishOnly": "webpack --mode production"
+    "test": "npm run lint && istanbul cover _mocha -x dist/** --report lcovonly -- -R spec && rm -rf ./coverage",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
+    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development -w",
+    "prepublishOnly": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   },
   "pre-commit": [
     "generate-readme"
@@ -39,7 +39,6 @@
     "babel-loader": "^8.0.6",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
-    "coveralls": "^3.0.2",
     "eslint": "^4.18.2",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",

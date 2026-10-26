@@ -1,7 +1,6 @@
 # clayutils
 
-[![Build Status](https://travis-ci.org/clay/clayutils.svg?branch=master)](https://travis-ci.org/clay/clayutils)
-[![Coverage Status](https://coveralls.io/repos/github/clay/clayutils/badge.svg?branch=master)](https://coveralls.io/github/clay/clayutils?branch=master)
+[![CI](https://github.com/clay/clayutils/actions/workflows/ci.yml/badge.svg)](https://github.com/clay/clayutils/actions/workflows/ci.yml)
 
 Utility functions for working with Clay.
 
