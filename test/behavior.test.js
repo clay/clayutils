@@ -1,9 +1,11 @@
 'use strict';
 
-// What clayutils 3.0.0 returned and threw for these inputs, recorded before the lib was reworked in 3.0.1: the
-// functions run on every request, so a change in what they do for odd input (upper case, a '@' in the wrong place,
-// characters that change when lower-cased) has to be deliberate. Each list of expected values follows the order of the
-// inputs it belongs to.
+// What clayutils 3.0.0 returned and threw for these inputs, recorded by running the published package, and what 4.0.0
+// still gives: the functions run on every request, so a change in what they do for odd input (upper case, a '@' in the
+// wrong place, characters that change when lower-cased) has to be deliberate. What 4.0.0 changed on purpose (a site
+// whose slug or host has a dollar sign or a regular expression character in it, a uri that is not a string, a page that is null)
+// is not here but in the tests of those functions. Each list of expected values follows the order of the inputs it
+// belongs to.
 
 const { describe, it } = require('node:test'),
   assert = require('node:assert/strict'),
@@ -32,7 +34,7 @@ const { describe, it } = require('node:test'),
     { slug: 'domain', host: 'domain.com' },
     { slug: 'domain', host: 'domain.com', path: '/' },
     { slug: 'domain', prefix: 'domain.com/path', host: 'ignored.com' },
-    { slug: 'a$&b', host: 'a.b' }
+    { slug: 'a-b', host: 'a.b' }
   ],
   prefixUris = [
     'domain.com/path/_components/foo/instances/bar', 'domain.com/_components/foo', 'domain.com/path', 'domain.com',
@@ -40,7 +42,7 @@ const { describe, it } = require('node:test'),
   ],
   slugUris = [
     'domain/_components/foo/instances/bar', 'domain', 'domain/_pages/p@published', 'x.com/_components/y', '',
-    'a$&b/_pages/1', 'domain domain'
+    'a-b/_pages/1', 'domain domain'
   ],
   jsons = [
     '{"layout":"domain.com/path/_components/l/instances/i","main":["domain.com/path/_components/a/instances/b"],"url":"http://domain.com/path/x.html"}',
@@ -65,7 +67,7 @@ function outcome(call) {
   }
 }
 
-describe('behaves as 3.0.0 did', () => {
+describe('still behaves as 3.0.0 did', () => {
   it('each function answers for each uri as it did', () => {
     const expected = {
       getComponentInstance: [
@@ -520,7 +522,7 @@ describe('behaves as 3.0.0 did', () => {
       'domain/_pages/p@published', 'domain/path/_pages/p@published', 'domain/path/_pages/p@published',
       'domain/_pages/p@published', 'domain.com/path/_pages/p@published', 'x.com/_components/y', 'x.com/_components/y',
       'x.com/_components/y', 'x.com/_components/y', 'x.com/_components/y', '', '', '', '', '', 'a.b/_pages/1',
-      'a.b/_pages/1', 'a.b/_pages/1', 'a.b/_pages/1', 'aa.b/b/_pages/1'
+      'a.b/_pages/1', 'a.b/_pages/1', 'a.b/_pages/1', 'a-b/_pages/1'
     ];
 
     for (const [i, uri] of prefixUris.entries()) {
@@ -538,7 +540,7 @@ describe('behaves as 3.0.0 did', () => {
       'domain', 'domain.com/path/_pages/p@published', 'domain.com/_pages/p@published',
       'domain.com/_pages/p@published', 'domain.com/path/_pages/p@published', 'domain/_pages/p@published',
       'x.com/_components/y', 'x.com/_components/y', 'x.com/_components/y', 'x.com/_components/y',
-      'x.com/_components/y', '', '', '', '', '', 'a$&b/_pages/1', 'a$&b/_pages/1', 'a$&b/_pages/1', 'a$&b/_pages/1',
+      'x.com/_components/y', '', '', '', '', '', 'a-b/_pages/1', 'a-b/_pages/1', 'a-b/_pages/1', 'a-b/_pages/1',
       'a.b/_pages/1', 'domain.com/path domain', 'domain.com domain', 'domain.com domain', 'domain.com/path domain',
       'domain domain'
     ];
@@ -696,7 +698,6 @@ describe('behaves as 3.0.0 did', () => {
     assert.deepEqual(outcome(() => lib.findComponentRefInPage(withBad, 'zzz')), { throws: 'Error: Argument must be a string, not number' });
     assert.deepEqual(outcome(() => lib.findComponentRefInPage(withBad, 'x')), 'a.com/_components/x/instances/1');
     assert.deepEqual(outcome(() => lib.findComponentRefInPage('page', 'x')), { throws: 'Error: Page argument must be an object, not string' });
-    assert.deepEqual(outcome(() => lib.findComponentRefInPage(null, 'x')), { throws: 'TypeError' });
     assert.deepEqual(outcome(() => lib.findComponentRefInPage({}, 1)), { throws: 'Error: Argument must be a string, not number' });
   });
 });
