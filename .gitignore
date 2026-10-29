@@ -60,5 +60,3 @@ typings/
 # Webstorm
 .idea
 
-# compiled scripts
-dist

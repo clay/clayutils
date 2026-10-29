@@ -3,15 +3,11 @@
   "version": "3.0.0",
   "description": "A collection of utility functions for working with Clay.",
   "main": "index.js",
-  "browser": "dist/index.js",
   "scripts": {
     "generate-readme": "node docs/generate-readme.js",
     "lint": "eslint",
     "test-local": "node --test",
-    "test": "npm run lint && npm run check-readme && npm run build && node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" --test-coverage-exclude=\"**/*.test.js\" --test-coverage-lines=100 --test-coverage-functions=100",
-    "build": "vite build",
-    "watch": "vite build --watch",
-    "prepack": "vite build",
+    "test": "npm run lint && npm run check-readme && node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" --test-coverage-exclude=\"**/*.test.js\" --test-coverage-lines=100 --test-coverage-functions=100",
     "check-readme": "node docs/generate-readme.js --check"
   },
   "repository": {
@@ -27,14 +23,12 @@
     "url": "https://github.com/clay/clayutils/issues"
   },
   "files": [
-    "/dist",
     "/lib",
     "!**/*.test.js"
   ],
   "homepage": "https://github.com/clay/clayutils#readme",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.13.0",
-    "vite": "8.3.5"
+    "eslint": "^10.13.0"
   }
 }
