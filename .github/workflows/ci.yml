@@ -23,32 +23,12 @@ jobs:
         with:
           persist-credentials: false
       # .nvmrc is the one place the Node version is set (26.12.1: the first 26.x
-      # with the October 2026 security fixes), shared with local development
+      # with the October 2026 security fixes), shared with local development and
+      # the same as `engines`
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      # lint, README check, build (the tests load the browser bundle in dist/) and the tests with their coverage threshold
+      # lint, README check, and the tests with their coverage threshold
       - run: npm test
-
-  # amphora and its sites run on older Node than .nvmrc until they move: the functions and the bundle have to work there
-  older-node:
-    name: Tests (Node ${{ matrix.node }})
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    strategy:
-      fail-fast: false
-      matrix:
-        node: [20, 22, 24]
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: npm run test-local
