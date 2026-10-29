@@ -1,17 +1,14 @@
 'use strict';
 
-const nymagfs = require('nymag-fs'),
-  hbs = require('handlebars'),
+const hbs = require('handlebars'),
   _ = require('lodash'),
   path = require('path'),
   fs = require('fs'),
   chalk = require('chalk');
 
-let tpl, data = {};
+let tpl, data;
 
 function reduceUtils(result, util) {
-  const utils = nymagfs.getFolders('lib');
-
   if (path.extname(util) === '') {
     result.push({
       name: path.basename(util)
