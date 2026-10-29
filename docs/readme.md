@@ -16,4 +16,4 @@ npm install --save clayutils
 
 # Utils:
 
-{{> utilDoc utils }}
+<!-- utils -->
