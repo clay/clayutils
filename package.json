@@ -9,9 +9,9 @@
     "lint": "eslint lib test index.js index.test.js",
     "test-local": "istanbul cover _mocha -x dist/**",
     "test": "npm run lint && istanbul cover _mocha -x dist/** --report lcovonly -- -R spec && rm -rf ./coverage",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development",
-    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode development -w",
-    "prepublishOnly": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "prepack": "vite build"
   },
   "pre-commit": [
     "generate-readme"
@@ -35,9 +35,6 @@
   ],
   "homepage": "https://github.com/clay/clayutils#readme",
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "babel-loader": "^8.0.6",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
     "eslint": "^4.18.2",
@@ -49,7 +46,6 @@
     "nymag-fs": "^1.0.0",
     "pre-commit": "^1.2.2",
     "sinon": "^2.1.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
+    "vite": "8.3.5"
   }
 }
