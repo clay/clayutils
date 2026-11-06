@@ -1,21 +1,15 @@
 {
   "name": "clayutils",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A collection of utility functions for working with Clay.",
   "main": "index.js",
-  "browser": "dist/index.js",
   "scripts": {
-    "generate-readme": "node docs/generate-readme.js && git add README.md",
-    "lint": "eslint lib test index.js index.test.js",
-    "test-local": "istanbul cover _mocha -x dist/**",
-    "test": "npm run lint && istanbul cover _mocha -x dist/** --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
-    "build": "webpack --mode development",
-    "watch": "webpack --mode development -w",
-    "prepublishOnly": "webpack --mode production"
+    "generate-readme": "node docs/generate-readme.js",
+    "lint": "eslint",
+    "test-local": "node --test",
+    "test": "npm run lint && npm run check-readme && node --test --experimental-test-coverage --test-coverage-include=\"lib/**\" --test-coverage-exclude=\"**/*.test.js\" --test-coverage-lines=100 --test-coverage-functions=100",
+    "check-readme": "node docs/generate-readme.js --check"
   },
-  "pre-commit": [
-    "generate-readme"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clay/clayutils.git"
@@ -29,31 +23,15 @@
     "url": "https://github.com/clay/clayutils/issues"
   },
   "files": [
-    "/dist",
-    "/lib"
+    "/lib",
+    "!**/*.test.js"
   ],
   "homepage": "https://github.com/clay/clayutils#readme",
+  "engines": {
+    "node": ">=26.12.1"
+  },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "babel-loader": "^8.0.6",
-    "chai": "^3.5.0",
-    "chalk": "^1.1.3",
-    "coveralls": "^3.0.2",
-    "eslint": "^4.18.2",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.2.0",
-    "pre-commit": "^1.2.2",
-    "sinon": "^2.1.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
-  },
-  "dependencies": {
-    "glob": "^7.1.1",
-    "lodash": "^4.17.4",
-    "nymag-fs": "^1.0.0"
-  },
-  "peerDependencies": {
-    "handlebars": "4"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0"
   }
 }

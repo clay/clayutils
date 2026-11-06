@@ -1,28 +1,23 @@
 'use strict';
 
-const _ = require('lodash'),
-  filename = __filename.split('/').pop().split('.').shift(),
-  expect = require('chai').expect,
-  lib = require('./' + filename),
-  bundled = require('./dist'),
-  fs = require('fs');
+const { describe, it } = require('node:test'),
+  assert = require('node:assert/strict'),
+  fs = require('node:fs'),
+  path = require('node:path'),
+  lib = require('./index'),
+  utils = fs.readdirSync(path.join(__dirname, 'lib'), { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name)
+    .sort();
 
-
-describe(_.startCase(filename), function () {
-
-  it('exports each util in lib', function () {
-    fs.readdirSync('./lib')
-      .filter(file => fs.statSync('./lib/' + file).isDirectory())
-      .forEach((util) => {
-        expect(lib[util]).to.eql(require(`./lib/${util}`));
-      });
+describe('index', () => {
+  it('exports every util in lib, and nothing else', () => {
+    assert.deepEqual(Object.keys(lib).sort(), utils);
   });
 
-  it('exports each util in bundled', function () {
-    fs.readdirSync('./lib')
-      .filter(file => fs.statSync('./lib/' + file).isDirectory())
-      .forEach((util) => {
-        expect(typeof bundled[util]).to.eql(typeof require(`./lib/${util}`));
-      });
+  it('exports the function of each util', () => {
+    utils.forEach((util) => {
+      assert.equal(lib[util], require(`./lib/${util}`));
+    });
   });
 });
